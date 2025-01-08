@@ -1,0 +1,132 @@
+/* ทั่วไป */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+article p {
+    margin-bottom: 8px; /* ลดระยะห่างระหว่างย่อหน้า */
+    line-height: 1.4; /* ลด line-height เพื่อให้บรรทัดชิดกัน */
+}
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* สัดส่วน 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button {
+    background-color: rgb(2, 213, 44); /* สีเขียว */
+color: white;
+width: 150px; /* ความกว้างคงที่ */
+height: 50px; /* ความสูงคงที่ */
+text-align: center;
+display: inline-flex; /* ใช้ flex เพื่อจัดข้อความให้อยู่กึ่งกลาง */
+align-items: center; /* จัดแนวตั้งให้ข้อความอยู่กึ่งกลาง */
+justify-content: center; /* จัดแนวนอนให้ข้อความอยู่กึ่งกลาง */
+text-decoration: none; /* ลบขีดเส้นใต้ */
+font-size: 16px; /* ขนาดตัวอักษร */
+margin: 10px; /* ระยะห่างระหว่างปุ่ม */
+box-sizing: border-box; /* รวม padding และ border ในขนาด */
+border: none;
+border-radius: 5px; /* มุมโค้งเล็กน้อย */
+cursor: pointer;
+}
+.image-container {
+    text-align: center;
+}
+
+img {
+    width: 100%; /* ให้รูปขยายตามความกว้างของ container */
+    max-width: 800px; /* กำหนดขนาดสูงสุดของรูป */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วนของรูป */
+}
+
+h2 {
+    color: #333;
+}
+.p3 {
+    text-align: center;
+    color: #333;
+}
+pre {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 10px auto;
+    line-height: 1;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* ทำให้ responsive */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
